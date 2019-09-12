@@ -1,0 +1,97 @@
+@import 'variables';
+@import 'mixins';
+
+html {
+    @include box-sizing(border-box);
+}
+
+*,
+*:after,
+*:before {
+    @include box-sizing(inherit);
+}
+
+body {
+    background-color: $negro;
+    font-family: $fuentePrincipal;
+    color: $gris2;
+
+
+    @include tablet {
+        background-color: unset;
+        background-image: url(../img/bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom center;
+    }
+}
+
+a{
+    color: $gris2;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.contenedor {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.logo {
+    margin-top: .5rem;
+    max-width: 180px;
+    @include tablet {
+        margin-top: .8rem;
+        margin-left: 2%;
+    }
+}
+
+.formulario-login{
+
+    @include tablet {
+
+        background-color: rgba(0, 0, 0, 0.85);
+        max-width: 450px;
+        padding: 2rem 4rem;
+        margin: 1rem auto 3rem auto;
+    }
+}
+
+form {
+    legend {
+        color: $blanco;
+        font-size: 2rem;
+        margin: 2rem 0;
+        font-weight: bold;
+    }
+    .campo {
+        display: flex;
+        position: relative;
+        margin-bottom: .8rem;
+        label{
+            position: absolute;
+            top: 1.1rem;
+            left: 1rem;
+            font-size: .9rem;
+            transition: font-size .2s ease, top .2s ease;
+        }
+        input {
+            flex: 1;
+            padding: 1.3rem 1rem .7rem 1rem;
+            border: none;
+            background-color: $gris;
+            border-radius: $radius;
+            &:focus {
+                background-color: $gris3;
+                outline: none;
+
+                + label {
+                    font-size: .6rem;
+                    top: .5rem;
+                }
+            }
+        }
+    }
+}
