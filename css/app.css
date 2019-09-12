@@ -47,14 +47,15 @@ a:hover {
 @media (min-width: 768px) {
   .logo {
     margin-top: .8rem;
-    margin-left: 2%;
+    margin-left: 1%;
   }
 }
 
 @media (min-width: 768px) {
   .formulario-login {
-    background-color: rgba(0, 0, 0, 0.85);
-    max-width: 450px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.897);
+    max-width: 420px;
     padding: 2rem 4rem;
     margin: 1rem auto 3rem auto;
   }
@@ -97,4 +98,122 @@ form .campo input:focus {
 form .campo input:focus + label {
   font-size: .6rem;
   top: .5rem;
+}
+
+form .submit {
+  display: flex;
+  margin-top: 2rem;
+}
+
+form .submit input[type="submit"] {
+  background-color: #E50914;
+  color: #ffffff;
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 1rem 0;
+}
+
+form .submit input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+form .acciones {
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem 0;
+  margin: .5rem 0 8rem 0;
+}
+
+form .acciones label, form .acciones a {
+  font-size: .8rem;
+  text-decoration: none;
+  color: #323232;
+}
+
+.contenido-inferior {
+  padding-bottom: 1rem;
+  color: #323232;
+}
+
+@media (min-width: 768px) {
+  .contenido-inferior {
+    padding-bottom: 0;
+  }
+}
+
+.contenido-inferior a {
+  font-size: .8rem;
+  color: #323232;
+}
+
+.contenido-inferior .nuevo-usuario {
+  font-size: 1rem;
+  margin-top: 1rem;
+  display: flex;
+}
+
+.contenido-inferior .nuevo-usuario a {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-left: .5rem;
+}
+
+.site-footer {
+  border-top: 1px solid #8c8c8c;
+  padding: 2rem 0 4rem 0;
+}
+
+@media (min-width: 768px) {
+  .site-footer {
+    border-top: unset;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 1rem 0 3rem 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-footer .contenedor {
+    max-width: 50%;
+  }
+}
+
+.site-footer .menu-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1200px) {
+  .site-footer .menu-footer {
+    max-width: 60%;
+  }
+}
+
+.site-footer .menu-footer a {
+  flex: 0 0 auto;
+  font-size: .8rem;
+  margin-right: 2rem;
+  padding: .5rem 0;
+}
+
+.site-footer .menu-footer a:last-of-type {
+  margin-right: 0;
+}
+
+.site-footer select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+  border: 1px solid #454545;
+  border-radius: 5px;
+  font-size: .8rem;
+  background-color: #000000;
+  color: #8c8c8c;
 }

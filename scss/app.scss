@@ -44,16 +44,16 @@ a{
     max-width: 180px;
     @include tablet {
         margin-top: .8rem;
-        margin-left: 2%;
+        margin-left: 1%;
     }
 }
 
 .formulario-login{
 
     @include tablet {
-
-        background-color: rgba(0, 0, 0, 0.85);
-        max-width: 450px;
+        border-radius: $radius;
+        background-color: rgba(0, 0, 0, 0.897);
+        max-width: 420px;
         padding: 2rem 4rem;
         margin: 1rem auto 3rem auto;
     }
@@ -93,5 +93,102 @@ form {
                 }
             }
         }
+    }
+
+    .submit {
+        display: flex;
+        margin-top: 2rem;
+
+        input[type="submit"] {
+            @include boton($primario, $blanco);
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .acciones {
+        display: flex;
+        justify-content: space-between;
+        padding: .5rem 0;
+        margin: .5rem 0 8rem 0;
+
+        label, a {
+            font-size: .8rem;
+            text-decoration: none;
+            color: $gris;
+        }
+    }
+}
+
+.contenido-inferior {
+    padding-bottom: 1rem;
+    color: $gris;
+    @include tablet {
+        padding-bottom: 0;
+    }
+    a {
+        font-size: .8rem;
+        color: $gris;
+    }
+
+    .nuevo-usuario {
+        font-size: 1rem;
+        margin-top: 1rem;
+        display: flex;
+
+        a {
+            font-size: 1rem;
+            color: $blanco;
+            margin-left: .5rem;
+        }
+    }
+}
+
+.site-footer {
+    border-top: 1px solid $gris2;
+    padding: 2rem 0 4rem 0;
+    @include tablet {
+        border-top: unset;
+        background-color: rgba(0, 0, 0, 0.85);
+        padding: 1rem 0 3rem 0;
+    }
+
+    .contenedor {
+        @include tablet {
+            max-width: 50%;
+        }
+    }
+
+    .menu-footer {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include desktop {
+            max-width: 60%;
+        }
+        a{
+            flex: 0 0 auto;
+            font-size: .8rem;
+            margin-right: 2rem;
+            padding: .5rem 0;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+
+    select {
+        appearance: none;
+        margin-top: 2rem;
+        padding: 1rem 3rem;
+        border: 1px solid $gris3;
+        border-radius: $radius;
+        font-size: .8rem;
+        background-color: $negro;
+        color: $gris2;
     }
 }
