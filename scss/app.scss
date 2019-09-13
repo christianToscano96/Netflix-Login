@@ -70,14 +70,30 @@ form {
         display: flex;
         position: relative;
         margin-bottom: .8rem;
+
+        span{
+          position: absolute;
+          right: 1rem;
+          top: 1rem;
+          
+          &:hover {
+              cursor: pointer;
+          }
+        }
         label{
             position: absolute;
             top: 1.1rem;
             left: 1rem;
             font-size: .9rem;
             transition: font-size .2s ease, top .2s ease;
+
+            &.valido {
+                font-size: .6rem;
+                top: .5rem;
+            }
         }
         input {
+            color: $blanco;
             flex: 1;
             padding: 1.3rem 1rem .7rem 1rem;
             border: none;
@@ -191,4 +207,18 @@ form {
         background-color: $negro;
         color: $gris2;
     }
+}
+
+.alerta {
+    color: $secundario;
+    display: block;
+    margin-bottom: .5rem;
+    padding: .2rem;
+    font-size: .8rem;
+    text-align: center;
+    transition: .5s;
+}
+
+input.no-valido {
+    border-bottom: 2px solid $secundario!important;
 }
